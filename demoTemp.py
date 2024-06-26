@@ -5,7 +5,7 @@ import requests
 def dataGet():
     city_Name = cityName.get()
     try:
-        response = requests.get(f"https://api.openweathermap.org/data/2.5/weather?q={city_Name}&appid=46227e6d683a75bbda3856f36908c0bc")
+        response = requests.get(f"https://api.openweathermap.org/data/2.5/weather?q={city_Name}&appid={api.key}")
         data = response.json()
         
         if response.status_code == 200:
